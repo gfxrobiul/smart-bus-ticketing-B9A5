@@ -11,58 +11,145 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,
-    wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+
     <!-- tailwind and dasiUI custom CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- custom internal css -->
     <style>
-        .inter-font{
+        .raleway-font {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .inter-font {
             font-family: "Inter", sans-serif;
         }
-        .raleway-font{
-            font-family: "Raleway", sans-serif;
-        }
-        
     </style>
 
 </head>
+
 <body>
-    <header class="container mx-auto"> 
+    <header class="container mx-auto">
         <!-- navbar section start -->
-        <div class="navbar raleway-font bg-base-100">
+        <div class="navbar raleway-font mt-5">
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Destination</a></li>
-                  <li><a>Search</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost text-4xl font-extrabold text-black">P-Ticket</a>
+                <a class="btn btn-ghost text-xl lg:text-4xl font-extrabold text-black">P-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1  text-[#030712B2] font-medium text-[18px]">
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Destination</a></li>
-                <li><a>Search</a></li>
-              </ul>
+                <ul class="menu menu-horizontal px-1  text-[#030712B2] font-medium text-[18px]">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
             </div>
             <div class="navbar-end">
-              <a class="btn text-[#1DD100] text-[20px] font-bold border border-[#1DD100] ">Bus<span><img src="asstes/images/bus-icon.png" alt=""></span></a> 
+                <a class="btn text-[#1DD100] bg-[#00d1002b] lg:text-[20px] font-bold border border-[#1DD100] ">Bus<span><img
+                            src="asstes/images/bus-icon.png" alt=""></span></a>
             </div>
-          </div>
+        </div>
+        <!-- Hero Banner Section Start -->
+        <div class="container mx-auto mt-10">
+            <div class="hero mx-auto w-full bg-cover bg-center bg-repeat h-[560px] rounded-3xl"
+                style="background-image: url(asstes/images/banner.png);">
+                <div class="hero-overlay bg-opacity-30 rounded-[30px]"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="">
+                        <h1 class="text-3xl lg:text-6xl font-extrabold raleway-font leading-[50px] lg:leading-[86px]">
+                            End-to-End Travel with <br> <span class="text-[#1DD100]">P
+                                Paribahan</span></h1>
+                        <div class="px-10 text-[14px] mb-10">
+                            <p>Yes, you can run unit tests and view the results directly within the app.</p>
+                            <p> The integrated testing features allow for a streamlined.</p>
+                        </div>
+                        <button class="btn lg:text-xl text-black bg-[#1DD100] border-none lg:px-8">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
-    <main></main>
+    <main class="container mx-auto">
+        <!-- Best offer for you section start -->
+        <section>
+            <div class="mt-28 pb-12">
+                <h1 class="text-[40px] text-black font-bold raleway-font text-center">Best offers for you</h1>
+            </div>
+            <!-- Coupon code container  -->
+            <div class="flex gap-10 flex-col lg:flex-row inter-font mx-5">
+                <!-- left-container  -->
+                <div class="bg-[#FFBF0F] rounded-3xl flex-1">
+                    <div class="flex ">
+                        <div class="w-3/5 justify-center items-center pt-10 lg:pt-16 pl-6 lg:pl-8">
+                            <h1 class="text-[40px] inter-font font-black text-[#030712CC]">15% OFF</h1>
+                            <h4 class="text-xl font-semibold text-[#030712CC]">on your next purchase</h4>
+                            <p class="text-[18px] font-medium text-[#03071280]">use by January 2024</p>
+
+                        </div>
+                        <div>
+                            <img src="asstes/images/cupon-devider.png" alt="">
+                        </div>
+                        <div class="items-center  pt-20 lg:pl-2">
+                            <h1 class="text-xl lg:text-[32px] raleway-font text-black font-bold ">NEW15</h1>
+                            <h2 class=" text[14px] lg:text-xl text-[#03071266] raleway-font lg:font-medium">Coupon Code
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- right container  -->
+                <div class="bg-[#F78C9C] rounded-3xl flex-1">
+                    <div class="flex ">
+                        <div class="w-3/5  justify-center items-center pt-10 lg:pt-16 pl-6 lg:pl-8">
+                            <h1 class="text-[40px] inter-font font-black text-[#030712CC]">15% OFF</h1>
+                            <h4 class="text-xl font-semibold text-[#030712CC]">on your next purchase</h4>
+                            <p class="text-[18px] font-medium text-[#03071280]">use by January 2024</p>
+
+                        </div>
+                        <div>
+                            <img src="asstes/images/cupon-devider.png" alt="">
+                        </div>
+                        <div class="items-center  pt-20 lg:pl-2">
+                            <h1 class="text-xl lg:text-[32px] raleway-font text-black font-bold ">Couple 20</h1>
+                            <h2 class=" text[14px] lg:text-xl text-[#03071266] raleway-font lg:font-medium">Coupon Code
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <h1> <button class="btn lg:text-xl text-[#1DD100]  border border-[#1DD100] lg:px-8">See All offers</button>
+                </h1>
+            </div>
+
+        </section>
+
+    </main>
     <footer></footer>
-<!-- script link added -->
+    <!-- script link added -->
     <script src="asstes/script/script.js"></script>
 </body>
+
 </html>
