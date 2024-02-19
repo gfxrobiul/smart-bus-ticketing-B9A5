@@ -1,0 +1,8 @@
+.show-seat-info li {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+}
+#center-class{
+    margin-right: 70px;
+}

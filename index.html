@@ -31,6 +31,10 @@
         .inter-font {
             font-family: "Inter", sans-serif;
         }
+        html{
+            scroll-behavior: smooth;
+            transition: ease 1s;
+        }
     </style>
 
 </head>
@@ -85,7 +89,7 @@
                             <p>Yes, you can run unit tests and view the results directly within the app.</p>
                             <p> The integrated testing features allow for a streamlined.</p>
                         </div>
-                        <button  class="btn lg:text-xl text-black bg-[#1DD100] border-none lg:px-8">Buy Tickets</button>
+                        <a href="#srcoll-ticket"><button  class="btn lg:text-xl text-black bg-[#1DD100] border-none lg:px-8">Buy Tickets</button></a> 
                     </div>
                 </div>
             </div>
@@ -148,7 +152,7 @@
 
 
         <!-- P>H paribahan sections -->
-        <section class="">
+        <section id="srcoll-ticket" class="">
         <div class="bg-gray-50 mt-28 border-t-4 border-[#1DD100]  rounded-3xl">
             <div class="text-center ">
                 <h1 class="text-[40px] raleway-font font-bold text-black pt-20">P.H Paribahan</h1>
@@ -175,7 +179,7 @@
                                 <div >
                                     <button class="btn flex items-center justify-center bg-[#00d1002b] text-[#1DD100] font-bold py-2 px-4 rounded-xl border-none">
                                         <img class="text-[18px] font-medium inter-font" src="asstes/images/seat-green.png" alt="Button Icon" >
-                                         40 Seats left
+                                        <span id="restof-seat">20</span>Seats left
                                     </button>         
                                 </div>
                             </div>
@@ -241,30 +245,27 @@
                     </div>
                     <!-- seat  -->
                     <div class="grid grid-cols-4 gap-5 p-10">
-                        <p class="  h-14 w-24 "></p>
-                        <p class="  h-14 w-24 "></p>
-                        <p class="  h-14 w-24 "></p>
-                        <p class="btn bg-gray-300 h-14 w-24 "><img src="asstes/images/steering-wheel.svg" alt=""></p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">A1</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">A2</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">A3</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">A4</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">B1</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">B2</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">B3</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">B4</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">C1</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">C2</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">C3</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">C4</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">D1</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">D2</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">D3</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">D4</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">E1</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">E2</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">E3</p>
-                        <p class="btn bg-gray-300 h-14 w-24 ">E4</p>
+                        <button class="seat-btn  h-14 w-24 "></button>
+                        <button class="seat-btn  h-14 w-24 "></button>
+                        <button class="seat-btn  h-14 w-24 "></button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 "><img      src="asstes/images/steering-wheel.svg" alt=""></button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">A1</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">A2</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">A3</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">A4</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">B1</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">B2</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">B3</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">B4</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">C1</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">C2</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">C3</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">C4</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">D1</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">D2</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">D3</button>
+                        <button class="seat-btn btn bg-gray-300 h-14 w-24 ">D4</button>
+            
                      
                        
                     </div>
@@ -278,17 +279,24 @@
                     </div>
                     
             
-                 <div class="bg-[#F7F8F8] p-5 rounded-2xl mt-10 "> 
-                    <div class="flex justify-between p-5 border-b-2 border-[#03071233] border-dotted">
-                        <div class="text-[16px] inter-font font-medium text-black">Seat</div>
-                        <div class="text-[16px] inter-font font-medium text-black">Class</div>
+                 <div class="bg-[#F7F8F8] p-5 rounded-2xl mt-10"> 
+                    <div class="flex justify-between py-5 mx-10 border-b-2 border-dotted border-gray-300">
+                        <div class="text-[16px] inter-font font-medium text-black">Seat <span> <sup class="bg-[#1DD100] p-2 rounded-lg" id="select-seat">0</sup></span></div>
+                        <div class="text-[16px] inter-font font-medium text-black " id="center-class">Class</div>
                         <div class="text-[16px] inter-font font-medium text-black">Price</div>
+                       
+                        
+                    </div>
+                    <div>
+                        <ul id="show-seat-info" class="show-seat-info mx-10 text-[#03071299] text[16px] font-medium">
+                            
+                        </ul>
                     </div>
 
                     <!-- price and grand tatal  -->
                    <div class="flex justify-between px-5 mt-5" >
                     <div  class="text-[16px] inter-font font-medium text-black">Total Price</div>
-                    <div  class="text-[16px] inter-font font-medium text-black">BDT <span>0</span></div>
+                    <div  class="text-[16px] inter-font font-medium text-black">BDT <span  id="total-cost">0</span></div>
                     <!-- input for promo code -->
                   </div>
   
@@ -302,7 +310,7 @@
                    <!-- grand tatal price -->
                  <div class="flex justify-between mt-5 px-5" >
                   <div  class="text-[16px] inter-font font-medium text-black">Grand Total</div>
-                  <div  class="text-[16px] inter-font font-medium text-black">BDT <span>0</span></div>
+                  <div  class="text-[16px] inter-font font-medium text-black">BDT <span id="grand-total-cost">0</span></div>
                  </div>
                  <div class="text-center mt-10">
                     <button class="btn bg-[#1DD100] text-xl raleway-font font-extrabold text-white rounded-2xl w-[500px]">Next</button>
