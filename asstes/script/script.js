@@ -1,10 +1,10 @@
-const seatBtn = document.getElementsByClassName('seat-btn');
-
 let count = 0;
 let restSeat = 20;
 let ticketPrice = 550;
 
 
+
+const seatBtn = document.getElementsByClassName('seat-btn');
 for (const btn of seatBtn) {
     btn.addEventListener('click', function (e) {
         count = count + 1;
@@ -12,7 +12,20 @@ for (const btn of seatBtn) {
 
         restSeat = restSeat - 1;
         setInnerText('restof-seat', restSeat);
+        //------------
+        let maxSeat = 0;
 
+        if (maxSeat !== 4) {
+            btn.classList.add('bg-green-500');
+            btn.classList.add('text-white');
+        }
+
+        else if (maxSeat == 4) {
+            btn.setAttribute("disabled")
+            maxSeat++;
+        };
+       
+        //===================
 
         const seatName = e.target.innerText;
         const seatClassName = "Economy";
@@ -26,6 +39,7 @@ for (const btn of seatBtn) {
         p3.innerText = seatClassName;
         const p2 = document.createElement('p');
         p2.innerText = ticketPrice;
+    
 
 
         li.appendChild(p);
@@ -33,10 +47,13 @@ for (const btn of seatBtn) {
         li.appendChild(p2);
         showSeatInfo.appendChild(li);
 
-        //total pric
+        // one btn one click 
+      
+
+        //calculate price
         totalPrice('total-cost',parseInt(ticketPrice));
 
-        // grand total price 
+        //calcucalte grand total price
         grandTotalCost('grand-total-cost',parseInt(ticketPrice));
 
     });
@@ -72,3 +89,14 @@ function grandTotalCost (id,value) {
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
+
+const applyBtn = document.getElementById('apply-btn');
+applyBtn.addEventListener('click', function () {
+    // get the value from input
+    const couponElement = document.getElementById('input-field');
+   console.log(couponElement);
+
+  
+
+
+});
