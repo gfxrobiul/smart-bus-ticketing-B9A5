@@ -37,14 +37,8 @@ for (const btn of seatBtn) {
         totalPrice('total-cost',parseInt(ticketPrice));
 
         // grand total price 
+        grandTotalCost('grand-total-cost',parseInt(ticketPrice));
 
-        const grandTotalCost = document.getElementById('grand-total-cost').innerText;
-
-        const convertGrandTotal = parseInt(grandTotalCost);
-        const sum2 = convertGrandTotal + parseInt(ticketPrice);
-               
-
-        setInnerText('grand-total-cost', sum2);
     });
 }
 
@@ -53,7 +47,7 @@ for (const btn of seatBtn) {
 
 // function for reuse 
 
-// totalcose section 
+// total cost section 
 function totalPrice (id,value) {
     const totalCost = document.getElementById(id).innerText;
 
@@ -63,12 +57,13 @@ function totalPrice (id,value) {
 
 }
 
+//grand total reuse function
 function grandTotalCost (id,value) {
     const totalCost = document.getElementById(id).innerText;
 
         const convertTotalCost = parseInt(totalCost);
         const sum = convertTotalCost + parseInt(value);
-        setInnerText(id, sum);
+        setInnerText('grand-total-cost', sum);
 
 }
 
