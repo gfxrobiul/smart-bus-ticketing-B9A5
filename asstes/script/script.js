@@ -1,4 +1,5 @@
 let count = 0;
+let maxSeat = 0;
 let restSeat = 20;
 let ticketPrice = 550;
 
@@ -12,20 +13,16 @@ for (const btn of seatBtn) {
 
         restSeat = restSeat - 1;
         setInnerText('restof-seat', restSeat);
-        //------------
-        let maxSeat = 0;
 
+        //seat btn bg change after click button
         if (maxSeat !== 4) {
             btn.classList.add('bg-green-500');
             btn.classList.add('text-white');
         }
-
-        else if (maxSeat == 4) {
-            btn.setAttribute("disabled")
-            maxSeat++;
-        };
+        
+        
        
-        //===================
+        //-------------------------------
 
         const seatName = e.target.innerText;
         const seatClassName = "Economy";
@@ -52,6 +49,10 @@ for (const btn of seatBtn) {
 
         //calculate price
         totalPrice('total-cost',parseInt(ticketPrice));
+
+        //discount
+       
+       
 
         //calcucalte grand total price
         grandTotalCost('grand-total-cost',parseInt(ticketPrice));
